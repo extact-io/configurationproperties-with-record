@@ -1,0 +1,1 @@
+# configurationproperties-with-record
