@@ -1,0 +1,10 @@
+test:
+  jwt-issuer:
+    enable: true
+    private-key: classpath:/jwt.key
+    clock:
+      type: FIXED
+      fixed-datetime: 2024-02-01T12:30 # typeがsystemの場合は無視される
+    claim:
+      issuer: JwtIssuerProperties
+      exp: 30 # 有効期限（分単位）
