@@ -1,0 +1,3 @@
+test:
+  jwt-issuer:
+    private-key: classpath:/jwt.key

@@ -84,7 +84,7 @@ class JwtIssuerPropertiesTest {
         void tesByData(@Autowired JwtIssuerDataProperties properties) {
 
             assertThat(properties.isEnable()).isFalse();
-            assertThat(properties.getPrivateKey()).isNull();
+            assertThat(properties.getPrivateKey()).isNotNull();
 
             assertThat(properties.getClock()).isNotNull();
             assertThat(properties.getClock().getType()).isEqualTo(ClockProperties.Type.SYSTEM);
@@ -100,7 +100,7 @@ class JwtIssuerPropertiesTest {
         void tesByRecord(@Autowired JwtIssuerRecordProperties properties) {
 
             assertThat(properties.enable()).isFalse();
-            assertThat(properties.privateKey()).isNull();
+            assertThat(properties.privateKey()).isNotNull();
 
             assertThat(properties.clock()).isNotNull();
             assertThat(properties.clock().type()).isEqualTo(sample.config.JwtIssuerRecordProperties.ClockProperties.Type.SYSTEM);
